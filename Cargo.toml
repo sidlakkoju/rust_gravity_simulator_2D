@@ -1,0 +1,12 @@
+[package]
+name = "gravity_simulation"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+macroquad = "0.4"
+
+# Faster debug builds while still optimizing dependencies (macroquad/miniquad)
+# so the window + rendering feel responsive even in `cargo run`.
+[profile.dev.package."*"]
+opt-level = 3
